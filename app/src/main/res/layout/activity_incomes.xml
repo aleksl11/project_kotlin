@@ -34,6 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"
         android:id="@+id/bi1"
         android:padding="10dp"
         android:layout_marginTop="30dp"/>
@@ -42,6 +44,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show list of all"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"
         android:id="@+id/bi2"
         android:padding="10dp"
         android:layout_marginTop="30dp"/>

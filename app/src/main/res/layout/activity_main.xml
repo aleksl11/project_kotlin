@@ -11,6 +11,8 @@
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:text="Incomes"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/expensesButton" />
@@ -21,6 +23,8 @@
         android:layout_height="80dp"
         android:layout_marginTop="4dp"
         android:text="Summary"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +35,8 @@
         android:layout_width="fill_parent"
         android:layout_height="80dp"
         android:text="Expenses"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/summaryButton" />
@@ -45,19 +51,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-
-<!--    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.6"
-        app:layout_constraintWidth_percent="0.9"
-        app:layout_constraintVertical_bias="0.1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/donald_duck"
-        android:scaleType="fitXY"
-        android:layout_gravity="center"/>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
