@@ -221,7 +221,7 @@ class SummaryActivity: AppCompatActivity() {
             //pieChart.animateY(1400, Easing.EaseInOutQuad)
 
             // on below line we are disabling our legend for pie chart
-            pieChart.legend.isEnabled = true
+            pieChart.legend.isEnabled = false
             //pieChart.setEntryLabelColor(Color.BLACK)
 
             // on below line we are creating array list and
