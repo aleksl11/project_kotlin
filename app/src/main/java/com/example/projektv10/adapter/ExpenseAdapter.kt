@@ -48,7 +48,7 @@ class   ExpenseAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
         val date = item.date.toString().substring(0,10)
-        holder.textView.text = "${item.id}. ${item.description}\n ${item.amount.toBigDecimal().setScale(2, RoundingMode.UP)} PLN\n $date\n Category: ${item.category}";
+        holder.textView.text = "${item.description}\n${item.amount.toBigDecimal().setScale(2, RoundingMode.UP)} PLN\n$date\nCategory: ${item.category}";
 
         holder.delbtn.setOnClickListener {
             val db = databaseBuilder(

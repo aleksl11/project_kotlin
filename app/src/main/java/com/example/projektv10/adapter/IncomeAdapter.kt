@@ -50,7 +50,7 @@ class IncomeAdapter(
     override fun onBindViewHolder(holder: IncomeAdapter.ItemViewHolder, position: Int) {
         val item = dataset[position]
         val date = item.date.toString().substring(0,10)
-        holder.textView.text = "${item.id}. ${item.description}\n ${item.amount.toBigDecimal().setScale(2, RoundingMode.UP)} PLN\n $date";
+        holder.textView.text = "${item.description}\n${item.amount.toBigDecimal().setScale(2, RoundingMode.UP)} PLN\n$date";
 
         holder.delbtn.setOnClickListener {
             val db = Room.databaseBuilder(
