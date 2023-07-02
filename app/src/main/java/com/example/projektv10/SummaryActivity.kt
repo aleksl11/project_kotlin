@@ -2,12 +2,10 @@ package com.example.projektv10
 
 import android.graphics.Color
 import android.graphics.Typeface
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projektv10.data.AppDatabase
 import com.example.projektv10.entities.Expense
@@ -41,7 +39,7 @@ class SummaryActivity: AppCompatActivity() {
         readData(appDb)
 
     }
-    @RequiresApi(Build.VERSION_CODES.O)
+
     fun onRadioButtonClicked(view: View) {
         if (view is RadioButton) {
             // Is the button now checked?
@@ -155,7 +153,7 @@ class SummaryActivity: AppCompatActivity() {
                     sumOther+=it.amount
             }
         }
-        text += "Bilance: ${(sumIncome - sumExpense).toBigDecimal().setScale(2, RoundingMode.UP)} PLN\n\n"
+        text += "Balance: ${(sumIncome - sumExpense).toBigDecimal().setScale(2, RoundingMode.UP)} PLN\n\n"
         if(expenses.isNotEmpty()) {
             val billsPercent =
                 ((sumBills / sumExpense) * 100).toBigDecimal().setScale(2, RoundingMode.UP)
@@ -178,7 +176,7 @@ class SummaryActivity: AppCompatActivity() {
             text += "Spent on entertainment: ${sumEntertainment.toBigDecimal().setScale(2, RoundingMode.UP)} PLN (${entertainmentPercent}%)\n"
             text += "Spent on other things: ${sumOther.toBigDecimal().setScale(2, RoundingMode.UP)} PLN (${otherPercent}%)\n"
         }
-        summary.text = text;
+        summary.text = text
 
         //chart
         if(expenses.isNotEmpty()) {
@@ -238,7 +236,7 @@ class SummaryActivity: AppCompatActivity() {
 
             // on below line we are setting icons.
             dataSet.setDrawIcons(false)
-            dataSet.setDrawValues(false);
+            dataSet.setDrawValues(false)
             pieChart.setDrawEntryLabels(false)
 
             // on below line we are setting slice for pie

@@ -15,7 +15,7 @@ import com.example.projektv10.entities.Expense
 import java.math.RoundingMode
 
 /**
- * Adapter for the [RecyclerView] in [Expense]. Displays [Expenses] data object.
+ * Adapter for the [RecyclerView] in [FetchExpensesActivity]. Displays [Expense] data object.
  */
 class   ExpenseAdapter(
     private val context: Context,

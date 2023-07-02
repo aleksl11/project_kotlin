@@ -1,13 +1,11 @@
 package com.example.projektv10
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projektv10.data.AppDatabase
 import com.example.projektv10.entities.Income
@@ -19,17 +17,16 @@ import java.time.LocalDateTime
 class IncomesActivity: AppCompatActivity() {
     private lateinit var appDb: AppDatabase
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_incomes)
 
-        val addButton: Button = findViewById(R.id.bi1);
+        val addButton: Button = findViewById(R.id.bi1)
         appDb = AppDatabase.getDatabase(this)
         addButton.setOnClickListener{
             writeData(appDb)
         }
-        val fetch: Button = findViewById(R.id.bi2);
+        val fetch: Button = findViewById(R.id.bi2)
         fetch.setOnClickListener{
             val intent = Intent(this@IncomesActivity, FetchIncomesActivity::class.java)
             startActivity(intent)
@@ -37,7 +34,6 @@ class IncomesActivity: AppCompatActivity() {
 
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     private fun writeData(appDb:AppDatabase){
         val descriptionField : EditText = findViewById(R.id.ti1)
         val description : String = descriptionField.text.toString()

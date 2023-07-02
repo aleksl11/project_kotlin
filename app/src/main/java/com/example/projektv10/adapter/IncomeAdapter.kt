@@ -10,14 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.example.projektv10.R
 import com.example.projektv10.data.AppDatabase
-import com.example.projektv10.data.ExpenseDao
 import com.example.projektv10.data.IncomeDao
-import com.example.projektv10.entities.Expense
 import com.example.projektv10.entities.Income
 import java.math.RoundingMode
 
 /**
- * Adapter for the [RecyclerView] in [Expense]. Displays [Income] data object.
+ * Adapter for the [RecyclerView] in [FetchIncomesActivity]. Displays [Income] data object.
  */
 class IncomeAdapter(
     private val context: Context,
@@ -36,7 +34,7 @@ class IncomeAdapter(
     /**
      * Create new views (invoked by the layout manager)
      */
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IncomeAdapter.ItemViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         // create a new view
         val adapterLayout = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item, parent, false)
@@ -47,10 +45,10 @@ class IncomeAdapter(
     /**
      * Replace the contents of a view (invoked by the layout manager)
      */
-    override fun onBindViewHolder(holder: IncomeAdapter.ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
         val date = item.date.toString().substring(0,10)
-        holder.textView.text = "${item.description}\n${item.amount.toBigDecimal().setScale(2, RoundingMode.UP)} PLN\n$date";
+        holder.textView.text = "${item.description}\n${item.amount.toBigDecimal().setScale(2, RoundingMode.UP)} PLN\n$date"
 
         holder.delbtn.setOnClickListener {
             val db = Room.databaseBuilder(

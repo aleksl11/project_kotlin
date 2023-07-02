@@ -1,6 +1,5 @@
 package com.example.projektv10.data
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.projektv10.entities.Income
 

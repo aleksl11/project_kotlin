@@ -29,7 +29,7 @@ class FetchExpensesActivity: AppCompatActivity() {
         }
     }
 
-    private suspend fun displayData(expenses: MutableList<Expense>){
+    private fun displayData(expenses: MutableList<Expense>){
         if(expenses.isNotEmpty()){
             val recyclerView = findViewById<RecyclerView>(R.id.recycle_view)
             recyclerView.adapter = ExpenseAdapter(this, expenses)
