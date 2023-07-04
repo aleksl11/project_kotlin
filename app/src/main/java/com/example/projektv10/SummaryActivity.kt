@@ -232,7 +232,7 @@ class SummaryActivity: AppCompatActivity() {
             entries.add(PieEntry((sumOther / sumExpense).toFloat(), "Other"))
 
             // on below line we are setting pie data set
-            val dataSet = PieDataSet(entries, "Mobile OS")
+            val dataSet = PieDataSet(entries, "Expenses")
 
             // on below line we are setting icons.
             dataSet.setDrawIcons(false)
